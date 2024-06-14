@@ -1,81 +1,103 @@
-
-body{
+body {
     background-color: #000000;
 }
-.presentacion{
+
+.presentacion {
     background:
-    linear-gradient(rgb(0,90,179), #cdbca0);
+        linear-gradient(rgb(0, 90, 179), #cdbca0);
     text-align: center;
     padding: 30vh;
 }
-nav{
-    background: rgb(0,90,179);
+
+nav {
+    background: rgb(0, 90, 179);
     margin: auto;
     padding: 2vh 0;
 }
-ul{
+
+ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
 }
-ul li{
+
+ul li {
     margin: 0 20px;
 }
-ul li .linea{
+
+ul li .linea {
     display: block;
     height: 2px;
     background: #000000;
     width: 0;
     transition: .5s;
 }
-ul li:hover .linea{
+
+ul li:hover .linea {
     width: 100%;
 }
-ul li a{
+
+ul li a {
     color: black;
     text-decoration: none;
 }
-.presentacion,.trabajos{
+
+.presentacion,
+.trabajos {
     height: 100vh;
 }
-.trabajos{
+
+.trabajos {
     background: url(Archivos/edificio.jpg);
     background-repeat: no-repeat;
     text-align: center;
 }
-.fotoTrabajo{
+
+.fotoTrabajo {
     width: 40vh;
     height: 40vh;
     transition: 2s;
 }
-.fotoTrabajo:hover{
-    transform: scale(1.5,1.5);
+
+.fotoTrabajo:hover {
+    transform: scale(1.5, 1.5);
 }
-.quienSomos{
+
+.quienSomos {
     background: url(Archivos/obra.jpg);
     background-position: center;
     background-size: cover;
 }
-.quienSomos, .paises, .contacto, .presentacion, .trabajos{
+
+.quienSomos,
+.paises,
+.contacto,
+.presentacion,
+.trabajos {
     height: 100vh;
 }
-.paises,h2{
+
+.paises,
+h2 {
     text-align: center;
 }
-.bandera{
+
+.bandera {
     width: 25vh;
     height: 25vh;
 }
-div{
+
+div {
     padding: 1vh;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
     padding: 20px;
 }
-  
+
 .item {
     width: 40vh;
     height: 40vh;
@@ -85,46 +107,66 @@ div{
     padding: 20px;
     text-align: center;
 }
-.item:hover{
+
+.item:hover {
     background-color: #888888;
     transition: 1s;
-    transform: scale(1.1,1.1);
+    transform: scale(1.1, 1.1);
 }
-.fondoCarta{
+
+.fondoCarta {
     text-align: center;
     width: 30vh;
     height: 25vh;
 }
-.tituloQuienSomos,p{
+
+.tituloQuienSomos,
+p {
     padding: 2vh;
     font-family: Arial, Helvetica, sans-serif;
 }
-.paises{
+
+.paises {
     color: white;
     padding: 5vh;
     background-color: #000000;
 }
-.tituloPaises{
+
+.tituloPaises {
     margin-top: 25vh;
     padding: 5vh;
 }
-.contacto{
+
+.contacto {
     background:
-    linear-gradient( #000000 ,rgb(0,90,179));
+        linear-gradient(#000000, rgb(0, 90, 179));
     color: white;
     text-align: center;
 }
-.tituloContacto{
+
+.tituloContacto {
     margin-top: 20vh;
 }
-footer{
+
+footer {
     padding-bottom: 5vh;
     text-align: center;
-    background-color:rgb(0,90,179) ;
+    background-color: rgb(0, 90, 179);
     color: #000000;
     font-style: italic;
     font-size: 3vh;
 }
+
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+        -15px -15px 30px rgb(60, 60, 60);
+}
+
+
 
 
 
@@ -139,58 +181,75 @@ footer{
 
 /* Media query para dispositivos móviles */
 @media only screen and (max-width: 768px) {
+
     .presentacion,
     .trabajos,
     .quienSomos,
     .paises,
     .contacto {
-        height: auto; /* Altura automática en lugar de 100vh */
-        padding: 1vh 0; /* Ajuste del espacio en dispositivos móviles */
+        height: auto;
+        /* Altura automática en lugar de 100vh */
+        padding: 1vh 0;
+        /* Ajuste del espacio en dispositivos móviles */
     }
-    *{
+
+    * {
         text-align: center !important;
     }
-    .presentacion{
-        padding-top:20vh ;
+
+    .presentacion {
+        padding-top: 20vh;
         background:
-        linear-gradient(rgb(0,90,179), #cdbca0);
+            linear-gradient(rgb(0, 90, 179), #cdbca0);
     }
-    .item{
+
+    .item {
         justify-self: center;
     }
-    .paises{
+
+    .paises {
         height: 10vh;
     }
-    nav{
+
+    nav {
         display: none;
     }
-    .bandera{
+
+    .bandera {
         width: 8vh !important;
         height: 8vh !important;
     }
+
     .fotoTrabajo,
     .bandera,
     .fondoCarta {
         text-align: center;
-        width: 80%; /* Ancho ajustado para dispositivos móviles */
-        margin: auto; /* Centrar elementos */
+        width: 80%;
+        /* Ancho ajustado para dispositivos móviles */
+        margin: auto;
+        /* Centrar elementos */
     }
+
     .fotoTrabajo,
     .item,
     .fondoCarta {
-        height: auto; /* Altura automática en lugar de 40vh */
+        height: auto;
+        /* Altura automática en lugar de 40vh */
     }
-    
+
 
     .tituloPaises,
     .tituloContacto {
-        margin-top: 10vh; /* Ajuste del espacio en dispositivos móviles */
+        margin-top: 10vh;
+        /* Ajuste del espacio en dispositivos móviles */
     }
 
     .footer {
-        padding-bottom: 2vh; /* Ajuste del espacio en dispositivos móviles */
+        padding-bottom: 2vh;
+        /* Ajuste del espacio en dispositivos móviles */
     }
-    .quienSomos{
+
+    .quienSomos {
         color: white;
     }
 }
